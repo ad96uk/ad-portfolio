@@ -1,33 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+s
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+a, p {
+  text-decoration: none;
+  line-height: 100%;
+} 
+
+.menu-bar a, .menu-open p{
+  cursor: pointer;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.menu-overlay {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.menu-link-item {
+  width: max-content;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.menu-link-item-holder{
+  position: relative;
+}
+
+.menu-link-item-holder a {
+  color: black;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: -0.02rem;
+  line-height: 85%;
+}
+
+.pulsating {
+  cursor: pointer;
+  animation: color_change 1s infinite alternate;
+}
+.pulsating-2 {
+  cursor: pointer;
+  animation: color_change 0.8s infinite alternate;
+}
+
+@keyframes color_change {
+ from { color: #000; }
+ to { color: #888; }
 }
