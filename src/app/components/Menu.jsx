@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import Link from "next/link";
 import { gsap } from "gsap/gsap-core";
 import { useGSAP } from "@gsap/react";
@@ -11,6 +11,40 @@ const menuLinks = [
   { path: "/contact", label: "Contact" },
   { path: "/cv", label: "CV" },
 ];
+
+const OpenToWork = () => {
+  const textRef = useRef(null);
+  const spanRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const spanWidth = spanRef.current.clientWidth;
+
+    gsap.to(textRef.current, {
+      x: -spanWidth,
+      duration: 5,
+      repeat: -1, 
+      ease: "linear",
+      onComplete: () => {
+        gsap.set(textRef.current, { x: 0 });
+      },
+    });
+  }, []);
+
+  return (
+    <div className="sectionx">
+      <div className="border-2 border-green200 rounded-full py-3 container">
+        <p className="text-green200 text" ref={textRef}>
+          <span ref={spanRef} className="spanx">👨‍💻 Open to work</span>
+          <span className="spanx">👨‍💻 Open to work</span>
+          <span className="spanx">👨‍💻 Open to work</span>
+          <span className="spanx">👨‍💻 Open to work</span>
+        </p>
+      </div>
+    </div>
+  );
+};
+
+
 
 export default function Menu() {
   const container = useRef();
@@ -63,12 +97,7 @@ export default function Menu() {
           className="text-green200 text-xl cursor-help">say hello</p>
           {showGif && <Image className='absolute top-[calc(50%-110px)] right-[calc(50%-250px)]' src='/wazap.webp' width={500} height={210} alt="wazap" />}
         </div>
-        <div className="menu-button">
-          {" "}
-          <button className="border-2 border-green200 px-[15px] py-[15px] rounded-[50px] text-green200">
-            ‍‍🧑🏻‍💻 open for work
-          </button>
-        </div>
+        <OpenToWork />
         <div className="menu-open" onClick={toggleMenu}>
           <p className="text-green200 text-xl">menu</p>
         </div>
@@ -76,7 +105,7 @@ export default function Menu() {
       <div className="menu-overlay flex flex-col fixed top-0 left-0 w-full h-screen z-[2] bg-green200">
         <div className="menu-overlay-bar flex flex-row w-full justify-between px-6 py-8 text-xl">
           <div className="menu-logo">
-            <Link href="/">anton dvaravenka</Link>
+            <Link href="/" onClick={toggleMenu}>anton dvaravenka</Link>
           </div>
           <div className="menu-close text-black100 cursor-pointer" onClick={toggleMenu}>
             <p>close</p>
@@ -100,10 +129,10 @@ export default function Menu() {
         </div>
         <div className="menu-preview flex w-full justify-between items-end flex-[4] px-6 py-8">
           <div className="menu-info-col flex flex-col">
-            <a href="#">gitHub</a>
+            <a target="_blank" href="https://github.com/ad98974771">gitHub</a>
           </div>
           <div className="menu-info-col flex flex-col">
-            <a href="#">linkedIn</a>
+            <a target="_blank" href="https://www.linkedin.com/in/anton-dvaravenka/">linkedIn</a>
           </div>
           <div className="menu-info-col flex flex-col">
             <a href="mailto:anton.dvaravenka@outlook.com">outlook</a>

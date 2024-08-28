@@ -23,7 +23,7 @@ const Page = () => {
   };
   
     return (
-    <div className="w-full h-[calc(100vh-82px)] bg-black100 flex flex-col justify-between">
+    <div className="w-full h-[calc(100vh-68px)] bg-black100 flex flex-col justify-between">
       <div className="flex-1 flex flex-col w-full justify-center text-green200 py-3 gap-2">
         <a href="mailto:anton.dvaravenka@outlook.com" className="text-center text-[6vw]">anton.dvaravenka@outlook.com</a>
         <p className="text-xl text-center">reach out anytime</p>

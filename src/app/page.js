@@ -35,7 +35,7 @@ export default function Home() {
     <main className="flex flex-col w-full items-center bg-white100">
       <div
         id="hero-section"
-        className="w-full h-[calc(100vh-82px)] bg-black100 flex flex-col justify-between"
+        className="w-full h-[calc(100vh-68px)] bg-black100 flex flex-col justify-between"
       >
         <div className="flex-1 flex flex-col justify-center text-green200 py-3 gap-2">
           <h1 className="text-center text-8xl leading-tight">

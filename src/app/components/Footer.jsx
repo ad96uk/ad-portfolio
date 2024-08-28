@@ -23,10 +23,10 @@ export default function Footer() {
             anton.dvaravenka@outlook.com
           </a>
           <div className="flex flex-row gap-4">
-            <a href="#">
+            <a target="_blank" href="https://github.com/ad98974771">
               <Image src="/git_black.png" width="48" height="48" alt="git" />
             </a>
-            <a href="#">
+            <a target="_blank" href="https://www.linkedin.com/in/anton-dvaravenka/">
               <Image
                 src="/linkedin_black.png"
                 width="48"

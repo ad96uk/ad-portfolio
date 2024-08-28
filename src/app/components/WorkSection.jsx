@@ -2,11 +2,12 @@ import React, {useState} from "react";
 import Project from './Project';
 import Modal from './Modal';
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
-  { title: "VDPHOTO", src: "vdphoto.png", color: "#1F1E1E", tags: 'Css, PHP, JavaScript, Elementor'},
-  { title: "DATACRAFT", src: "datacraft.png", color: "#1F1E1E", tags: 'PHP, ACF, JavaScript, Css'},
-  { title: "WILL UPLOAD SOON", src: "null", color: "#1F1E1E", tags: 'null'},
+  { title: "VDPHOTO", path: '/vdphoto', src: "vdphoto.png", color: "#1F1E1E", tags: 'Css, PHP, JavaScript, Elementor'},
+  { title: "DATACRAFT", path: '/datacraft', src: "datacraft.png", color: "#1F1E1E", tags: 'PHP, ACF, JavaScript, Css'},
+  { title: "WILL UPLOAD SOON", path: '/', src: "null", color: "#1F1E1E", tags: 'null'},
 ];
 
 export default function WorkSection() {
@@ -21,6 +22,7 @@ export default function WorkSection() {
       </h2>
       {projects.map((project, index) => {
         return (
+          <Link href={project.path} >
           <Project
             index={index}
             title={project.title}
@@ -28,12 +30,13 @@ export default function WorkSection() {
             key={index}
             tags={project.tags}
           />
+          </Link>
         );
       })}
   </div>
   <Modal modal={modal} projects={projects} />
 </section>
-<div className="flex w-full justify-start -mt-10">
+<div className="flex w-full justify-start -mt-8">
     <Image
       className=""
       src="/gif-2.webp"

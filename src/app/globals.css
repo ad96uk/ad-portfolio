@@ -53,3 +53,35 @@ a, p {
  from { color: #000; }
  to { color: #888; }
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1180px;
+}
+
+.sectionx {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  overflow: hidden;
+  width: 140px;
+  white-space: nowrap;
+}
+
+.text {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.spanx {
+  display: block;
+  padding-right: 10px;
+}
