@@ -88,7 +88,7 @@ export default function Menu() {
   }, [isMenuOpen]);
 
   return (
-    <div className="menu-container bg-black100" ref={container}>
+    <div className="menu-container bg-black100 " ref={container}>
       <div className="menu-bar w-full	flex justify-between items-center z-[1] px-6 py-3">
         <div className="menu-logo">
           <p 
