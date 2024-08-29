@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Project from './Project';
 import Modal from './Modal';
 import Image from "next/image";
-import Link from "next/link";
+import TransitionLink from "./utils/TransitionLink";
 
 const projects = [
   { title: "VDPHOTO", path: '/vdphoto', src: "vdphoto.png", color: "#1F1E1E", tags: 'Css, PHP, JavaScript, Elementor'},
@@ -22,7 +22,7 @@ export default function WorkSection() {
       </h2>
       {projects.map((project, index) => {
         return (
-          <Link href={project.path} >
+          <TransitionLink href={project.path} >
           <Project
             index={index}
             title={project.title}
@@ -30,7 +30,7 @@ export default function WorkSection() {
             key={index}
             tags={project.tags}
           />
-          </Link>
+          </TransitionLink>
         );
       })}
   </div>

@@ -45,7 +45,6 @@ const OpenToWork = () => {
 };
 
 
-
 export default function Menu() {
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,7 +64,7 @@ export default function Menu() {
         .timeline({ paused: true })
         .to(".menu-overlay", {
           duration: 1.25,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
           ease: "power4.inOut",
         })
         .to(".menu-link-item-holder", {
@@ -95,7 +94,7 @@ export default function Menu() {
           onMouseEnter={() => setShowGif(true)}
           onMouseLeave={() => setShowGif(false)}
           className="text-green200 text-xl cursor-help">say hello</p>
-          {showGif && <Image className='absolute top-[calc(50%-110px)] right-[calc(50%-250px)]' src='/wazap.webp' width={500} height={210} alt="wazap" />}
+          {showGif && <Image className='z-10 absolute top-[calc(50%-110px)] right-[calc(50%-250px)]' src='/wazap.webp' width={500} height={210} alt="wazap" />}
         </div>
         <OpenToWork />
         <div className="menu-open" onClick={toggleMenu}>

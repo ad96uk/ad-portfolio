@@ -58,8 +58,8 @@ export default function Modal({modal, projects}) {
             }
             </div>
         </motion.div>
-        <motion.div ref={cursor} className="w-[80px] h-[80px] rounded-[50%] bg-greenAccent text-black100 absolute flex items-center justify-center text-[14px] font-light pointer-events-none" variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
-        <motion.div ref={cursorLabel} className="w-[60px] h-[60px] rounded-[50%] bg-greenAccent text-black100 absolute flex items-center justify-center text-[14px] font-light pointer-events-none" variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>view</motion.div>
+        <motion.div ref={cursor} className="z-[200] w-[80px] h-[80px] rounded-[50%] bg-greenAccent text-black100 absolute flex items-center justify-center text-[14px] font-light pointer-events-none" variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
+        <motion.div ref={cursorLabel} className="z-[200] w-[60px] h-[60px] rounded-[50%] bg-greenAccent text-black100 absolute flex items-center justify-center text-[14px] font-light pointer-events-none" variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>view</motion.div>
     </>
   )
 }

@@ -1,7 +1,10 @@
+"use client"
 import React from "react";
+import SmoothScrolling from "../components/SmoothScrolling";
 
 const Page = () => {
   const numbers = Array.from({ length: 56 }, (_, index) => index + 1);
+  SmoothScrolling();
 
   return (
     <div className="w-full bg-black100 flex flex-col justify-center items-center py-[50px]">

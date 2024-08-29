@@ -18,7 +18,7 @@ const SmoothScrolling = () => {
     requestAnimationFrame(raf);
 
     return () => {
-      lenis.destroy(); // очищаем инстанс при размонтировании компонента
+      lenis.destroy();
     };
   }, []);
 };

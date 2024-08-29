@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import WorkSection from "./components/WorkSection";
 import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
