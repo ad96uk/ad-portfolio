@@ -94,4 +94,16 @@ a, p {
   pointer-events: none;
   z-index: 100;
   transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+
+.cursor-style.grow {
+  width: 50px; 
+  height: 50px;
+}
+
+.grow-small{
+  width: 30px!important;
+  height: 30px!important;
 }

@@ -17,9 +17,11 @@ export default function WorkSection() {
         <>
 <section className="flex flex-col w-full max-w-[1180px] pt-[100px] justify-end items-end px-6">
     <div className="w-full max-w-[1060px] flex flex-col justify-end">
-      <h2 className="text-7xl leading-tight pb-[40px] text-end">
+      <div className="flex justify-end ">
+      <h2 className="text-5xl md:text-7xl leading-tight pb-[40px] cursor-scale">
         Last <span className="text-greenAccent italic">{"{work}"}</span>
       </h2>
+      </div>
       {projects.map((project, index) => {
         return (
           <TransitionLink href={project.path} >

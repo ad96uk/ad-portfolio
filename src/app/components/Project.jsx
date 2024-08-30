@@ -14,7 +14,7 @@ export default function Project({ index, title, setModal, tags}) {
 hover:opacity-50"
     >
       <h2
-        className="hover:-translate-x-[10px] text-[48px] m-0 font-normal [transition:all_0.4s]"
+        className="hover:-translate-x-[10px] text-4xl md:text-[48px] m-0 font-normal [transition:all_0.4s]"
       >
         {title}
       </h2>

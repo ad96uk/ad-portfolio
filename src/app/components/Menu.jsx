@@ -116,7 +116,7 @@ export default function Menu() {
               {menuLinks.map((link, index) => (
                 <div className="menu-link-item" key={index}>
                   <div className="menu-link-item-holder" onClick={toggleMenu}>
-                    <Link href={link.path} className="menu-link">
+                    <Link href={link.path} className="menu-link cursor-scale">
                       {link.label}
                     </Link>
                   </div>

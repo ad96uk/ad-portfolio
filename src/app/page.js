@@ -37,14 +37,14 @@ export default function Home() {
           className="w-full h-[calc(100vh-68px)] bg-black100 flex flex-col justify-between"
         >
           <div className="flex-1 flex flex-col justify-center text-green200 py-3 gap-2">
-            <h1 className="text-center text-8xl leading-tight">
+            <h1 className="text-center text-6xl md:text-8xl leading-tight cursor-scale">
               Hi, i’m Anton, a <br />
               <span className="text-greenAccent italic">{"{web}"}</span>{" "}
               developer
             </h1>
           </div>
           <div className="flex justify-between items-end text-green200">
-            <div className="w-[200px]"></div>
+            <div className="w-0 md:w-[200px]"></div>
             <div className="mb-4 w-[400px] flex justify-center">
               <div className="items-center flex justify-center px-2">
                 <span
