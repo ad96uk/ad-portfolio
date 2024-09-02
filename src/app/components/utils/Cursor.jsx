@@ -2,12 +2,12 @@
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { usePathname } from 'next/navigation'; // для получения текущего пути
+import { usePathname } from 'next/navigation';
 
 export default function Cursor() {
   const cursorRef = useRef(null);
   const position = useRef({ x: 0, y: 0 });
-  const pathname = usePathname(); // Получаем текущий путь
+  const pathname = usePathname();
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -47,7 +47,6 @@ export default function Cursor() {
       }
     };
 
-    // Добавляем глобальные обработчики событий
     document.addEventListener('mousemove', handleMouseMove);
     document.querySelectorAll('.cursor-scale').forEach((element) => {
       element.addEventListener('mouseenter', handleMouseEnter);
@@ -55,14 +54,13 @@ export default function Cursor() {
     });
 
     return () => {
-      // Удаляем глобальные обработчики событий
       document.removeEventListener('mousemove', handleMouseMove);
       document.querySelectorAll('.cursor-scale').forEach((element) => {
         element.removeEventListener('mouseenter', handleMouseEnter);
         element.removeEventListener('mouseleave', handleMouseLeave);
       });
     };
-  }, [pathname]); // Следим за изменением пути
+  }, [pathname]);
 
   return (
     <span ref={cursorRef} className="cursor-style"></span>
