@@ -29,8 +29,8 @@ const Page = () => {
                 <p className="text-black100 text-1xl font-bold">LIVERPOOL, UK</p>
               </div>
               <div className="flex flex-col gap-2 items-end">
-                <a href="#" className="font-bold">linkedin</a>
-                <a href="#" className="font-bold">mail</a>
+                <a target="_blank" href="https://www.linkedin.com/in/anton-dvaravenka/" className="font-bold">linkedin</a>
+                <a href="mailto:anton.dvaravenka@outlook.com" className="font-bold">mail</a>
               </div>
             </div>
             <div id="experience-section" className="flex flex-col gap-3">
